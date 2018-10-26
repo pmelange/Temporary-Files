@@ -1,0 +1,37 @@
+Format: 1.8
+Date: Sun, 08 Jun 2014 20:54:01 +0200
+Source: olsrd
+Binary: olsrd olsrd-plugins olsrd-gui
+Architecture: source amd64
+Version: 0.9.7.1-1
+Distribution: unstable
+Urgency: medium
+Maintainer: Roland Stigge <stigge@antcom.de>
+Changed-By: Roland Stigge <stigge@antcom.de>
+Description:
+ olsrd      - optimized link-state routing daemon (unik-olsrd)
+ olsrd-gui  - GTK GUI to control and get info about olsrd
+ olsrd-plugins - various plugins to enhance olsrd
+Changes:
+ olsrd (0.9.7.1-1) unstable; urgency=medium
+ .
+   * New upstream release
+   * debian/control: Standards-Version: 3.9.5
+Checksums-Sha1:
+ bafd8ad583cd856f76d19c7fb4ed4320aa2c9c98 832 olsrd_0.9.7.1-1.dsc
+ 4a2fdffb3625d851fbf94dd8a8af914b8c2d8498 75414380 olsrd_0.9.7.1-1.tar.gz
+ 88a9452a1e33e0d8895ab774b134c072a5528857 262124 olsrd_0.9.7.1-1_amd64.deb
+ 9281bdf1970adf059831225c58b2e1f77e870d9f 260232 olsrd-plugins_0.9.7.1-1_amd64.deb
+ 26ff87048a94fc8c428c3ffee2df2c48a7a7c7b4 102940 olsrd-gui_0.9.7.1-1_amd64.deb
+Checksums-Sha256:
+ 1e6cacd373ee5866fb8c5f302ef893f8042c5cba8b58d2d3003aaba48a5e1bb4 832 olsrd_0.9.7.1-1.dsc
+ 7848ea9f6adb8e885454ebc7ae364dd59ad69216e2b3f47e129b39fa266240e5 75414380 olsrd_0.9.7.1-1.tar.gz
+ 1462b2ab4d83b33514f8066b869f7edce66dd612c3a2ea761eadb4b55511ab80 262124 olsrd_0.9.7.1-1_amd64.deb
+ bf6702ff7d167e6ee1b3519a986573dc34931c90b6a8453f96185bc48961cc32 260232 olsrd-plugins_0.9.7.1-1_amd64.deb
+ ec01663fed948ee89b31d0b2b7625ae13abe8087c7030cabe26a82f7bcc6a333 102940 olsrd-gui_0.9.7.1-1_amd64.deb
+Files:
+ fc44fe5a2d9b7ac552bdcdb97f56375d 832 net extra olsrd_0.9.7.1-1.dsc
+ 60b5395b30e6175aa675cd790bf0da04 75414380 net extra olsrd_0.9.7.1-1.tar.gz
+ c49f15445aec3dcf32a588d4481c0111 262124 net extra olsrd_0.9.7.1-1_amd64.deb
+ b4bc3cd66aff4ae940660ff3f003740b 260232 net extra olsrd-plugins_0.9.7.1-1_amd64.deb
+ 842cddaa221a4309b921b9a9986eca6a 102940 net extra olsrd-gui_0.9.7.1-1_amd64.deb
