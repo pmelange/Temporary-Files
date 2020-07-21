@@ -1,0 +1,55 @@
+Format: 1.8
+Date: Tue, 27 Mar 2018 08:11:51 +0200
+Source: olsrd
+Binary: olsrd olsrd-dbgsym olsrd-gui olsrd-gui-dbgsym olsrd-plugins olsrd-plugins-dbgsym
+Architecture: source amd64
+Version: 0.9.8.0-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Roland Stigge <stigge@antcom.de>
+Changed-By: Nicolas Braud-Santoni <nicolas@braud-santoni.eu>
+Description:
+ olsrd      - optimized link-state routing daemon (unik-olsrd)
+ olsrd-gui  - GTK GUI to control and get info about olsrd
+ olsrd-plugins - various plugins to enhance olsrd
+Changes:
+ olsrd (0.9.8.0-1) UNRELEASED; urgency=medium
+ .
+   [ Nicolas Braud-Santoni ]
+   * New upstream version 0.9.6.1
+   * Update debian/watch
+ .
+   [ Ondřej Nový ]
+   * d/control: Deprecating priority extra as per policy 4.0.1
+   * d/changelog: Remove trailing whitespaces
+   * d/control: Remove trailing whitespaces
+Checksums-Sha1:
+ cdb54ece06990ed452383abe142c30e02e273ff2 870 olsrd_0.9.8.0-1.dsc
+ 70439d4945e176fda89192ec2def7ae106de2c75 99603966 olsrd_0.9.8.0-1.tar.gz
+ 54463e0e7fa7f40ff1b99db61b69305cdf097947 567208 olsrd-dbgsym_0.9.8.0-1_amd64.deb
+ bf7b451d28200faec6133dd4f08fd8ffa02f7f7c 95200 olsrd-gui-dbgsym_0.9.8.0-1_amd64.deb
+ 136fc10367ea4c8efeadbc721447d2d1a817c302 104712 olsrd-gui_0.9.8.0-1_amd64.deb
+ d1a4d993e3d7408e9c6b0306010a793a2aee65a7 896012 olsrd-plugins-dbgsym_0.9.8.0-1_amd64.deb
+ c5183c8c87406e25878224c6c5a5bbd8bc32b448 335432 olsrd-plugins_0.9.8.0-1_amd64.deb
+ 6e44b3dc7c9ab0f3089ce46428caeef0feb6098f 12240 olsrd_0.9.8.0-1_amd64.buildinfo
+ 82d998b5f9d126e40a3ec8cf10a925a23f793343 265364 olsrd_0.9.8.0-1_amd64.deb
+Checksums-Sha256:
+ d05db8613330bc7b62def063a1b23176bd898efd20e4c46aebeabd1ff9d3a6b8 870 olsrd_0.9.8.0-1.dsc
+ f14cb08b87d0768038f3e8f9e99f1cae281c470c3e7e63da01e9dc20ca5d7beb 99603966 olsrd_0.9.8.0-1.tar.gz
+ c68d3e6f4ca927508fe6c10b4faf793e4ea684d29b8fe98d42844c76a562578c 567208 olsrd-dbgsym_0.9.8.0-1_amd64.deb
+ 24deae4beefa5c553271ed69929ea99103bf45f2d1ec28876e387966b6fd7532 95200 olsrd-gui-dbgsym_0.9.8.0-1_amd64.deb
+ 6ace55a2c2089522b21752809f43f79ddc7d3843a296e009b85cfebea4a66104 104712 olsrd-gui_0.9.8.0-1_amd64.deb
+ 6fb0b643147c4f4d25bdd3d84b0651b85a27fdd2df3625d5b5303275ce5c78f8 896012 olsrd-plugins-dbgsym_0.9.8.0-1_amd64.deb
+ a80bd57f733118efade99dc196b1f7816ecd21cd0180429cc7382657d1d46710 335432 olsrd-plugins_0.9.8.0-1_amd64.deb
+ d6c96209c9ac9a809d9e93b42700e4392b3be059f0cfe6a59ca700ef8853b1f1 12240 olsrd_0.9.8.0-1_amd64.buildinfo
+ 92bef7be9bf069e5bc7e1dd10141c1f9986c3dc407ebd736c2b0a000660dff2f 265364 olsrd_0.9.8.0-1_amd64.deb
+Files:
+ a9922b43f3532a413fe70b277fd6c98f 870 net optional olsrd_0.9.8.0-1.dsc
+ 1cb4f5f43c65c092d6eed0727b6df65c 99603966 net optional olsrd_0.9.8.0-1.tar.gz
+ ddee0817e13f7bc7d412022b4c09456b 567208 debug optional olsrd-dbgsym_0.9.8.0-1_amd64.deb
+ 460356a897d43054aab97e9c0d9dcedc 95200 debug optional olsrd-gui-dbgsym_0.9.8.0-1_amd64.deb
+ 719cfca573fad730004ad662324019b7 104712 net optional olsrd-gui_0.9.8.0-1_amd64.deb
+ bd9c17011e40633dfb6f13426530f2a3 896012 debug optional olsrd-plugins-dbgsym_0.9.8.0-1_amd64.deb
+ 4831154859372bd02b0e02a1442c5844 335432 net optional olsrd-plugins_0.9.8.0-1_amd64.deb
+ d6acb589a4d6f5b0433fda3bd37e245c 12240 net optional olsrd_0.9.8.0-1_amd64.buildinfo
+ a026cd7bd6304891192e803f5530b23a 265364 net optional olsrd_0.9.8.0-1_amd64.deb

@@ -1,0 +1,1052 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package olsrd
+dpkg-buildpackage: info: source version 0.9.8.0-1
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by Nicolas Braud-Santoni <nicolas@braud-santoni.eu>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   debian/rules override_dh_auto_clean
+make[1]: Entering directory '/home/pmelange/src/olsrd'
+dh_auto_clean
+	make -j1 distclean
+make[2]: Entering directory '/home/pmelange/src/olsrd'
+rm -f src/build_msg.o src/builddata.o src/cli.o src/common/autobuf.o src/common/avl.o src/common/list.o src/common/string_handling.o src/duplicate_handler.o src/duplicate_set.o src/egressFile.o src/fpm.o src/gateway.o src/gateway_costs.o src/gateway_default_handler.o src/gateway_list.o src/generate_msg.o src/hashing.o src/hna_set.o src/hysteresis.o src/interfaces.o src/ipc_frontend.o src/ipcalc.o src/link_set.o src/lock_file.o src/lq_mpr.o src/lq_packet.o src/lq_plugin.o src/lq_plugin_default_ff.o src/lq_plugin_default_ffeth.o src/lq_plugin_default_float.o src/lq_plugin_default_fpm.o src/main.o src/mantissa.o src/mid_set.o src/mpr.o src/mpr_selector_set.o src/neighbor_table.o src/net_olsr.o src/olsr.o src/olsr_cookie.o src/olsr_niit.o src/olsr_spf.o src/packet.o src/parser.o src/pid_file.o src/plugin_loader.o src/plugin_util.o src/process_package.o src/process_routes.o src/rebuild_packet.o src/routing_table.o src/scheduler.o src/superfasthash.o src/tc_set.o src/two_hop_neighbor_table.o src/linux/apm.o src/linux/kernel_routes_nl.o src/linux/kernel_tunnel.o src/linux/lq_plugin_ffeth_nl80211.o src/linux/net.o src/linux/nl80211_link_info.o src/unix/ifnet.o src/unix/log.o src/unix/misc.o src/cfgparser/olsrd_conf.o src/cfgparser/olsrd_conf_checksum.o src/cfgparser/oparse.o src/cfgparser/oscan.o src/cfgparser/cfgfile_gen.o src/cfgparser/olsrd_conf.o src/cfgparser/olsrd_conf_checksum.o src/cfgparser/oparse.o src/cfgparser/oscan.o src/cfgparser/cfgfile_gen.o src/build_msg.d src/builddata.d src/cli.d src/common/autobuf.d src/common/avl.d src/common/list.d src/common/string_handling.d src/duplicate_handler.d src/duplicate_set.d src/egressFile.d src/fpm.d src/gateway.d src/gateway_costs.d src/gateway_default_handler.d src/gateway_list.d src/generate_msg.d src/hashing.d src/hna_set.d src/hysteresis.d src/interfaces.d src/ipc_frontend.d src/ipcalc.d src/link_set.d src/lock_file.d src/lq_mpr.d src/lq_packet.d src/lq_plugin.d src/lq_plugin_default_ff.d src/lq_plugin_default_ffeth.d src/lq_plugin_default_float.d src/lq_plugin_default_fpm.d src/main.d src/mantissa.d src/mid_set.d src/mpr.d src/mpr_selector_set.d src/neighbor_table.d src/net_olsr.d src/olsr.d src/olsr_cookie.d src/olsr_niit.d src/olsr_spf.d src/packet.d src/parser.d src/pid_file.d src/plugin_loader.d src/plugin_util.d src/process_package.d src/process_routes.d src/rebuild_packet.d src/routing_table.d src/scheduler.d src/superfasthash.d src/tc_set.d src/two_hop_neighbor_table.d src/linux/apm.d src/linux/kernel_routes_nl.d src/linux/kernel_tunnel.d src/linux/lq_plugin_ffeth_nl80211.d src/linux/net.d src/linux/nl80211_link_info.d src/unix/ifnet.d src/unix/log.d src/unix/misc.d src/cfgparser/olsrd_conf.d src/cfgparser/olsrd_conf_checksum.d src/cfgparser/oparse.d src/cfgparser/oscan.d src/cfgparser/cfgfile_gen.d olsrd olsrd.exe src/builddata.c src/cfgparser/oscan.c src/cfgparser/oscan.c-tmp src/cfgparser/oparse.c src/cfgparser/oparse.c-tmp src/cfgparser/oparse.h src/cfgparser/oparse.h-tmp
+rm -f libolsrd.a
+rm -f olsr_switch.exe
+rm -f gui/win32/Main/olsrd_cfgparser.lib
+rm -f olsr-setup.exe
+rm -fr gui/win32/Main/Release
+rm -fr gui/win32/Shim/Release
+for dir in arprefresh bmf dot_draw dyn_gw dyn_gw_plain httpinfo info jsoninfo mdns mini nameservice netjson poprouting p2pd pgraph pud quagga secure sgwdynspeed txtinfo watchdog;do make OS="linux" WARNINGS="" VERBOSE="0" SANITIZE_ADDRESS="0" -C lib/$dir LIBDIR=/usr/lib clean;rm -f lib/$dir/*.so lib/$dir/*.dll;done
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/arprefresh'
+rm -f src/olsrd_arprefresh.o src/olsrd_arprefresh.d olsrd_arprefresh.so.0.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/arprefresh'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/bmf'
+rm -f src/Address.o src/Bmf.o src/NetworkInterfaces.o src/Packet.o src/PacketHistory.o src/olsrd_plugin.o src/Address.d src/Bmf.d src/NetworkInterfaces.d src/Packet.d src/PacketHistory.d src/olsrd_plugin.d olsrd_bmf.so.1.7.0
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/bmf'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/dot_draw'
+rm -f src/olsrd_dot_draw.o src/olsrd_plugin.o src/olsrd_dot_draw.d src/olsrd_plugin.d olsrd_dot_draw.so.0.3
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/dot_draw'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/dyn_gw'
+rm -f src/olsrd_dyn_gw.o src/olsrd_plugin.o src/olsrd_dyn_gw.d src/olsrd_plugin.d olsrd_dyn_gw.so.0.5
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/dyn_gw'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/dyn_gw_plain'
+rm -f src/olsrd_dyn_gw_plain.o src/olsrd_dyn_gw_plain.d olsrd_dyn_gw_plain.so.0.4
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/dyn_gw_plain'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/httpinfo'
+rm -f src/admin_interface.o src/olsrd_httpinfo.o src/olsrd_plugin.o ../../src/cfgparser/cfgfile_gen.o src/admin_interface.d src/olsrd_httpinfo.d src/olsrd_plugin.d olsrd_httpinfo.so.0.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/httpinfo'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/info'
+rm -f http_headers.o json_helpers.o olsrd_info.o http_headers.d json_helpers.d olsrd_info.d olsrd_info.so.0.0
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/info'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/jsoninfo'
+rm -f src/olsrd_jsoninfo.o src/olsrd_plugin.o ../info/http_headers.o ../info/json_helpers.o ../info/olsrd_info.o src/olsrd_jsoninfo.d src/olsrd_plugin.d olsrd_jsoninfo.so.1.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/jsoninfo'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/mdns'
+rm -f src/Address.o src/NetworkInterfaces.o src/Packet.o src/RouterElection.o src/mdns.o src/olsrd_plugin.o src/Address.d src/NetworkInterfaces.d src/Packet.d src/RouterElection.d src/mdns.d src/olsrd_plugin.d olsrd_mdns.so.1.0.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/mdns'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/mini'
+rm -f src/mini_plugin.o src/mini_plugin.d olsrd_mini.so.0.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/mini'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/nameservice'
+rm -f src/compat.o src/mapwrite.o src/nameservice.o src/olsrd_plugin.o src/compat.d src/mapwrite.d src/nameservice.d src/olsrd_plugin.d olsrd_nameservice.so.0.4
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/nameservice'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/netjson'
+rm -f src/olsrd_netjson.o src/olsrd_netjson_helpers.o src/olsrd_plugin.o ../info/http_headers.o ../info/json_helpers.o ../info/olsrd_info.o src/olsrd_netjson.d src/olsrd_netjson_helpers.d src/olsrd_plugin.d olsrd_netjson.so.1.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/netjson'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/poprouting'
+rm -f src/olsrd_plugin.o src/olsrd_poprouting.o ../info/olsrd_info.o ../info/json_helpers.o ../info/http_headers.o src/olsrd_plugin.d src/olsrd_poprouting.d olsrd_poprouting.so.1.0
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/poprouting'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/p2pd'
+rm -f src/NetworkInterfaces.o src/Packet.o src/PacketHistory.o src/dllist.o src/olsrd_plugin.o src/p2pd.o src/NetworkInterfaces.d src/Packet.d src/PacketHistory.d src/dllist.d src/olsrd_plugin.d src/p2pd.d olsrd_p2pd.so.0.1.0
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/p2pd'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/pgraph'
+rm -f src/olsrd_pgraph.o src/olsrd_pgraph.d olsrd_pgraph.so.1.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/pgraph'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/pud'
+[clean]
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/doc'
+[clean] doc
+rm -fr "doxygen.conf.temp" "html" "latex" "man" "olsrd_pud.pdf"
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/doc'
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/nmealib'
+make[5]: Entering directory '/home/pmelange/src/olsrd/lib/pud/nmealib/doc'
+make[5]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/nmealib/doc'
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/nmealib'
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/wireformat'
+make[5]: Entering directory '/home/pmelange/src/olsrd/lib/pud/wireformat/doc'
+echo "[clean]"
+[clean]
+rm -fr "html" "latex" "man" "doxygen.conf.temp" "libOlsrdPudWireFormat.pdf"
+make[5]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/wireformat/doc'
+[clean]
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/wireformat'
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/wireformat-java'
+Makefile:114: *** No java include directory detected at /usr/lib/jvm/java-11-openjdk-amd64/include.  Stop.
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/wireformat-java'
+make[3]: *** [Makefile:156: clean] Error 2
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/pud'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/quagga'
+rm -f src/client.o src/olsrd_plugin.o src/packet.o src/parse.o src/plugin.o src/quagga.o src/client.d src/olsrd_plugin.d src/packet.d src/parse.d src/plugin.d src/quagga.d olsrd_quagga.so.0.2.2
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/quagga'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/secure'
+rm -f src/md5.o src/olsrd_plugin.o src/olsrd_secure.o src/md5.d src/olsrd_plugin.d src/olsrd_secure.d olsrd_secure.so.0.6
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/secure'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/sgwdynspeed'
+[clean]
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/sgwdynspeed/doc'
+[clean] doc
+rm -fr "doxygen.conf.temp" "html" "latex" "man" "olsrd_sgwdynspeed.pdf"
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/sgwdynspeed/doc'
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/sgwdynspeed'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/txtinfo'
+rm -f src/olsrd_plugin.o src/olsrd_txtinfo.o ../info/http_headers.o ../info/json_helpers.o ../info/olsrd_info.o src/olsrd_plugin.d src/olsrd_txtinfo.d olsrd_txtinfo.so.1.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/txtinfo'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/watchdog'
+rm -f src/olsrd_plugin.o src/olsrd_plugin.d olsrd_watchdog.so.0.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/watchdog'
+make[3]: Entering directory '/home/pmelange/src/olsrd/gui/linux-gtk'
+rm -f src/callbacks.o src/common.o src/interface.o src/ipc.o src/main.o src/nodes.o src/olsr.o src/packet.o src/routes.o olsrd-gui
+make[3]: Leaving directory '/home/pmelange/src/olsrd/gui/linux-gtk'
+rm -f src/TAGS
+find . \( -name '*.[od]' -o -name '*~' \) -not -path "*/.hg*" -type f -print0 | xargs -0 rm -f
+make[3]: Entering directory '/home/pmelange/src/olsrd/src/olsr_switch'
+rm -f *.[od]
+rm -f *~
+rm -f ../../olsr_switch
+make[3]: Leaving directory '/home/pmelange/src/olsrd/src/olsr_switch'
+make[3]: Entering directory '/home/pmelange/src/olsrd/src/cfgparser'
+rm -f *.[od~] olsrd_cfgparser.so.0.1 olsrd_cfgparser oscan.c oscan.c-tmp oparse.c oparse.c-tmp oparse.h oparse.h-tmp
+make[3]: Leaving directory '/home/pmelange/src/olsrd/src/cfgparser'
+make[2]: Leaving directory '/home/pmelange/src/olsrd'
+/usr/bin/make distclean
+make[2]: Entering directory '/home/pmelange/src/olsrd'
+rm -f src/build_msg.o src/cli.o src/common/autobuf.o src/common/avl.o src/common/list.o src/common/string_handling.o src/duplicate_handler.o src/duplicate_set.o src/egressFile.o src/fpm.o src/gateway.o src/gateway_costs.o src/gateway_default_handler.o src/gateway_list.o src/generate_msg.o src/hashing.o src/hna_set.o src/hysteresis.o src/interfaces.o src/ipc_frontend.o src/ipcalc.o src/link_set.o src/lock_file.o src/lq_mpr.o src/lq_packet.o src/lq_plugin.o src/lq_plugin_default_ff.o src/lq_plugin_default_ffeth.o src/lq_plugin_default_float.o src/lq_plugin_default_fpm.o src/main.o src/mantissa.o src/mid_set.o src/mpr.o src/mpr_selector_set.o src/neighbor_table.o src/net_olsr.o src/olsr.o src/olsr_cookie.o src/olsr_niit.o src/olsr_spf.o src/packet.o src/parser.o src/pid_file.o src/plugin_loader.o src/plugin_util.o src/process_package.o src/process_routes.o src/rebuild_packet.o src/routing_table.o src/scheduler.o src/superfasthash.o src/tc_set.o src/two_hop_neighbor_table.o src/linux/apm.o src/linux/kernel_routes_nl.o src/linux/kernel_tunnel.o src/linux/lq_plugin_ffeth_nl80211.o src/linux/net.o src/linux/nl80211_link_info.o src/unix/ifnet.o src/unix/log.o src/unix/misc.o src/cfgparser/olsrd_conf.o src/cfgparser/olsrd_conf_checksum.o src/cfgparser/oparse.o src/cfgparser/oscan.o src/cfgparser/cfgfile_gen.o src/cfgparser/olsrd_conf.o src/cfgparser/olsrd_conf_checksum.o src/cfgparser/oparse.o src/cfgparser/oscan.o src/cfgparser/cfgfile_gen.o src/build_msg.d src/cli.d src/common/autobuf.d src/common/avl.d src/common/list.d src/common/string_handling.d src/duplicate_handler.d src/duplicate_set.d src/egressFile.d src/fpm.d src/gateway.d src/gateway_costs.d src/gateway_default_handler.d src/gateway_list.d src/generate_msg.d src/hashing.d src/hna_set.d src/hysteresis.d src/interfaces.d src/ipc_frontend.d src/ipcalc.d src/link_set.d src/lock_file.d src/lq_mpr.d src/lq_packet.d src/lq_plugin.d src/lq_plugin_default_ff.d src/lq_plugin_default_ffeth.d src/lq_plugin_default_float.d src/lq_plugin_default_fpm.d src/main.d src/mantissa.d src/mid_set.d src/mpr.d src/mpr_selector_set.d src/neighbor_table.d src/net_olsr.d src/olsr.d src/olsr_cookie.d src/olsr_niit.d src/olsr_spf.d src/packet.d src/parser.d src/pid_file.d src/plugin_loader.d src/plugin_util.d src/process_package.d src/process_routes.d src/rebuild_packet.d src/routing_table.d src/scheduler.d src/superfasthash.d src/tc_set.d src/two_hop_neighbor_table.d src/linux/apm.d src/linux/kernel_routes_nl.d src/linux/kernel_tunnel.d src/linux/lq_plugin_ffeth_nl80211.d src/linux/net.d src/linux/nl80211_link_info.d src/unix/ifnet.d src/unix/log.d src/unix/misc.d src/cfgparser/olsrd_conf.d src/cfgparser/olsrd_conf_checksum.d src/cfgparser/oparse.d src/cfgparser/oscan.d src/cfgparser/cfgfile_gen.d olsrd olsrd.exe src/builddata.c src/cfgparser/oscan.c src/cfgparser/oscan.c-tmp src/cfgparser/oparse.c src/cfgparser/oparse.c-tmp src/cfgparser/oparse.h src/cfgparser/oparse.h-tmp
+rm -f libolsrd.a
+rm -f olsr_switch.exe
+rm -f gui/win32/Main/olsrd_cfgparser.lib
+rm -f olsr-setup.exe
+rm -fr gui/win32/Main/Release
+rm -fr gui/win32/Shim/Release
+for dir in arprefresh bmf dot_draw dyn_gw dyn_gw_plain httpinfo info jsoninfo mdns mini nameservice netjson poprouting p2pd pgraph pud quagga secure sgwdynspeed txtinfo watchdog;do /usr/bin/make OS="linux" WARNINGS="" VERBOSE="0" SANITIZE_ADDRESS="0" -C lib/$dir LIBDIR=/usr/lib clean;rm -f lib/$dir/*.so lib/$dir/*.dll;done
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/arprefresh'
+rm -f src/olsrd_arprefresh.o src/olsrd_arprefresh.d olsrd_arprefresh.so.0.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/arprefresh'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/bmf'
+rm -f src/Address.o src/Bmf.o src/NetworkInterfaces.o src/Packet.o src/PacketHistory.o src/olsrd_plugin.o src/Address.d src/Bmf.d src/NetworkInterfaces.d src/Packet.d src/PacketHistory.d src/olsrd_plugin.d olsrd_bmf.so.1.7.0
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/bmf'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/dot_draw'
+rm -f src/olsrd_dot_draw.o src/olsrd_plugin.o src/olsrd_dot_draw.d src/olsrd_plugin.d olsrd_dot_draw.so.0.3
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/dot_draw'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/dyn_gw'
+rm -f src/olsrd_dyn_gw.o src/olsrd_plugin.o src/olsrd_dyn_gw.d src/olsrd_plugin.d olsrd_dyn_gw.so.0.5
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/dyn_gw'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/dyn_gw_plain'
+rm -f src/olsrd_dyn_gw_plain.o src/olsrd_dyn_gw_plain.d olsrd_dyn_gw_plain.so.0.4
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/dyn_gw_plain'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/httpinfo'
+rm -f src/admin_interface.o src/olsrd_httpinfo.o src/olsrd_plugin.o ../../src/cfgparser/cfgfile_gen.o src/admin_interface.d src/olsrd_httpinfo.d src/olsrd_plugin.d olsrd_httpinfo.so.0.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/httpinfo'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/info'
+rm -f http_headers.o json_helpers.o olsrd_info.o http_headers.d json_helpers.d olsrd_info.d olsrd_info.so.0.0
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/info'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/jsoninfo'
+rm -f src/olsrd_jsoninfo.o src/olsrd_plugin.o ../info/http_headers.o ../info/json_helpers.o ../info/olsrd_info.o src/olsrd_jsoninfo.d src/olsrd_plugin.d olsrd_jsoninfo.so.1.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/jsoninfo'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/mdns'
+rm -f src/Address.o src/NetworkInterfaces.o src/Packet.o src/RouterElection.o src/mdns.o src/olsrd_plugin.o src/Address.d src/NetworkInterfaces.d src/Packet.d src/RouterElection.d src/mdns.d src/olsrd_plugin.d olsrd_mdns.so.1.0.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/mdns'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/mini'
+rm -f src/mini_plugin.o src/mini_plugin.d olsrd_mini.so.0.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/mini'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/nameservice'
+rm -f src/compat.o src/mapwrite.o src/nameservice.o src/olsrd_plugin.o src/compat.d src/mapwrite.d src/nameservice.d src/olsrd_plugin.d olsrd_nameservice.so.0.4
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/nameservice'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/netjson'
+rm -f src/olsrd_netjson.o src/olsrd_netjson_helpers.o src/olsrd_plugin.o ../info/http_headers.o ../info/json_helpers.o ../info/olsrd_info.o src/olsrd_netjson.d src/olsrd_netjson_helpers.d src/olsrd_plugin.d olsrd_netjson.so.1.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/netjson'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/poprouting'
+rm -f src/olsrd_plugin.o src/olsrd_poprouting.o ../info/olsrd_info.o ../info/json_helpers.o ../info/http_headers.o src/olsrd_plugin.d src/olsrd_poprouting.d olsrd_poprouting.so.1.0
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/poprouting'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/p2pd'
+rm -f src/NetworkInterfaces.o src/Packet.o src/PacketHistory.o src/dllist.o src/olsrd_plugin.o src/p2pd.o src/NetworkInterfaces.d src/Packet.d src/PacketHistory.d src/dllist.d src/olsrd_plugin.d src/p2pd.d olsrd_p2pd.so.0.1.0
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/p2pd'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/pgraph'
+rm -f src/olsrd_pgraph.o src/olsrd_pgraph.d olsrd_pgraph.so.1.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/pgraph'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/pud'
+[clean]
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/doc'
+[clean] doc
+rm -fr "doxygen.conf.temp" "html" "latex" "man" "olsrd_pud.pdf"
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/doc'
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/nmealib'
+make[5]: Entering directory '/home/pmelange/src/olsrd/lib/pud/nmealib/doc'
+make[5]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/nmealib/doc'
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/nmealib'
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/wireformat'
+make[5]: Entering directory '/home/pmelange/src/olsrd/lib/pud/wireformat/doc'
+echo "[clean]"
+[clean]
+rm -fr "html" "latex" "man" "doxygen.conf.temp" "libOlsrdPudWireFormat.pdf"
+make[5]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/wireformat/doc'
+[clean]
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/wireformat'
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/wireformat-java'
+Makefile:114: *** No java include directory detected at /usr/lib/jvm/java-11-openjdk-amd64/include.  Stop.
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/wireformat-java'
+make[3]: *** [Makefile:156: clean] Error 2
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/pud'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/quagga'
+rm -f src/client.o src/olsrd_plugin.o src/packet.o src/parse.o src/plugin.o src/quagga.o src/client.d src/olsrd_plugin.d src/packet.d src/parse.d src/plugin.d src/quagga.d olsrd_quagga.so.0.2.2
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/quagga'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/secure'
+rm -f src/md5.o src/olsrd_plugin.o src/olsrd_secure.o src/md5.d src/olsrd_plugin.d src/olsrd_secure.d olsrd_secure.so.0.6
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/secure'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/sgwdynspeed'
+[clean]
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/sgwdynspeed/doc'
+[clean] doc
+rm -fr "doxygen.conf.temp" "html" "latex" "man" "olsrd_sgwdynspeed.pdf"
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/sgwdynspeed/doc'
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/sgwdynspeed'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/txtinfo'
+rm -f src/olsrd_plugin.o src/olsrd_txtinfo.o ../info/http_headers.o ../info/json_helpers.o ../info/olsrd_info.o src/olsrd_plugin.d src/olsrd_txtinfo.d olsrd_txtinfo.so.1.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/txtinfo'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/watchdog'
+rm -f src/olsrd_plugin.o src/olsrd_plugin.d olsrd_watchdog.so.0.1
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/watchdog'
+make[3]: Entering directory '/home/pmelange/src/olsrd/gui/linux-gtk'
+rm -f src/callbacks.o src/common.o src/interface.o src/ipc.o src/main.o src/nodes.o src/olsr.o src/packet.o src/routes.o olsrd-gui
+make[3]: Leaving directory '/home/pmelange/src/olsrd/gui/linux-gtk'
+rm -f src/TAGS
+find . \( -name '*.[od]' -o -name '*~' \) -not -path "*/.hg*" -type f -print0 | xargs -0 rm -f
+make[3]: Entering directory '/home/pmelange/src/olsrd/src/olsr_switch'
+rm -f *.[od]
+rm -f *~
+rm -f ../../olsr_switch
+make[3]: Leaving directory '/home/pmelange/src/olsrd/src/olsr_switch'
+make[3]: Entering directory '/home/pmelange/src/olsrd/src/cfgparser'
+rm -f *.[od~] olsrd_cfgparser.so.0.1 olsrd_cfgparser oscan.c oscan.c-tmp oparse.c oparse.c-tmp oparse.h oparse.h-tmp
+make[3]: Leaving directory '/home/pmelange/src/olsrd/src/cfgparser'
+make[2]: Leaving directory '/home/pmelange/src/olsrd'
+make[1]: Leaving directory '/home/pmelange/src/olsrd'
+   dh_clean
+ dpkg-source -b .
+dpkg-source: warning: source directory 'olsrd' is not <sourcepackage>-<upstreamversion> 'olsrd-0.9.8.0'
+dpkg-source: info: using source format '1.0'
+dpkg-source: info: building olsrd in olsrd_0.9.8.0-1.tar.gz
+dpkg-source: info: building olsrd in olsrd_0.9.8.0-1.dsc
+ debian/rules build
+dh build
+   dh_update_autotools_config
+   dh_auto_configure
+   debian/rules override_dh_auto_build
+make[1]: Entering directory '/home/pmelange/src/olsrd'
+/usr/bin/make DEBUG=0 VERBOSE=1 build_all
+make[2]: Entering directory '/home/pmelange/src/olsrd'
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/unix/misc.c" | sed -e '1s/\(misc\.o\)[ :]*/src\/unix\/\1 src\/unix\/misc\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/unix/misc.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/unix/log.c" | sed -e '1s/\(log\.o\)[ :]*/src\/unix\/\1 src\/unix\/log\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/unix/log.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/unix/ifnet.c" | sed -e '1s/\(ifnet\.o\)[ :]*/src\/unix\/\1 src\/unix\/ifnet\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/unix/ifnet.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/linux/nl80211_link_info.c" | sed -e '1s/\(nl80211_link_info\.o\)[ :]*/src\/linux\/\1 src\/linux\/nl80211_link_info\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/linux/nl80211_link_info.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/linux/net.c" | sed -e '1s/\(net\.o\)[ :]*/src\/linux\/\1 src\/linux\/net\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/linux/net.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/linux/lq_plugin_ffeth_nl80211.c" | sed -e '1s/\(lq_plugin_ffeth_nl80211\.o\)[ :]*/src\/linux\/\1 src\/linux\/lq_plugin_ffeth_nl80211\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/linux/lq_plugin_ffeth_nl80211.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/linux/kernel_tunnel.c" | sed -e '1s/\(kernel_tunnel\.o\)[ :]*/src\/linux\/\1 src\/linux\/kernel_tunnel\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/linux/kernel_tunnel.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/linux/kernel_routes_nl.c" | sed -e '1s/\(kernel_routes_nl\.o\)[ :]*/src\/linux\/\1 src\/linux\/kernel_routes_nl\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/linux/kernel_routes_nl.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/linux/apm.c" | sed -e '1s/\(apm\.o\)[ :]*/src\/linux\/\1 src\/linux\/apm\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/linux/apm.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/two_hop_neighbor_table.c" | sed -e '1s/\(two_hop_neighbor_table\.o\)[ :]*/src\/\1 src\/two_hop_neighbor_table\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/two_hop_neighbor_table.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/tc_set.c" | sed -e '1s/\(tc_set\.o\)[ :]*/src\/\1 src\/tc_set\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/tc_set.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/superfasthash.c" | sed -e '1s/\(superfasthash\.o\)[ :]*/src\/\1 src\/superfasthash\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/superfasthash.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/scheduler.c" | sed -e '1s/\(scheduler\.o\)[ :]*/src\/\1 src\/scheduler\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/scheduler.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/routing_table.c" | sed -e '1s/\(routing_table\.o\)[ :]*/src\/\1 src\/routing_table\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/routing_table.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/rebuild_packet.c" | sed -e '1s/\(rebuild_packet\.o\)[ :]*/src\/\1 src\/rebuild_packet\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/rebuild_packet.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/process_routes.c" | sed -e '1s/\(process_routes\.o\)[ :]*/src\/\1 src\/process_routes\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/process_routes.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/process_package.c" | sed -e '1s/\(process_package\.o\)[ :]*/src\/\1 src\/process_package\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/process_package.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/plugin_util.c" | sed -e '1s/\(plugin_util\.o\)[ :]*/src\/\1 src\/plugin_util\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/plugin_util.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/plugin_loader.c" | sed -e '1s/\(plugin_loader\.o\)[ :]*/src\/\1 src\/plugin_loader\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/plugin_loader.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/pid_file.c" | sed -e '1s/\(pid_file\.o\)[ :]*/src\/\1 src\/pid_file\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/pid_file.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/parser.c" | sed -e '1s/\(parser\.o\)[ :]*/src\/\1 src\/parser\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/parser.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/packet.c" | sed -e '1s/\(packet\.o\)[ :]*/src\/\1 src\/packet\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/packet.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/olsr_spf.c" | sed -e '1s/\(olsr_spf\.o\)[ :]*/src\/\1 src\/olsr_spf\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/olsr_spf.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/olsr_niit.c" | sed -e '1s/\(olsr_niit\.o\)[ :]*/src\/\1 src\/olsr_niit\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/olsr_niit.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/olsr_cookie.c" | sed -e '1s/\(olsr_cookie\.o\)[ :]*/src\/\1 src\/olsr_cookie\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/olsr_cookie.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/olsr.c" | sed -e '1s/\(olsr\.o\)[ :]*/src\/\1 src\/olsr\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/olsr.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/net_olsr.c" | sed -e '1s/\(net_olsr\.o\)[ :]*/src\/\1 src\/net_olsr\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/net_olsr.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/neighbor_table.c" | sed -e '1s/\(neighbor_table\.o\)[ :]*/src\/\1 src\/neighbor_table\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/neighbor_table.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/mpr_selector_set.c" | sed -e '1s/\(mpr_selector_set\.o\)[ :]*/src\/\1 src\/mpr_selector_set\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/mpr_selector_set.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/mpr.c" | sed -e '1s/\(mpr\.o\)[ :]*/src\/\1 src\/mpr\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/mpr.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/mid_set.c" | sed -e '1s/\(mid_set\.o\)[ :]*/src\/\1 src\/mid_set\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/mid_set.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/mantissa.c" | sed -e '1s/\(mantissa\.o\)[ :]*/src\/\1 src\/mantissa\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/mantissa.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/main.c" | sed -e '1s/\(main\.o\)[ :]*/src\/\1 src\/main\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/main.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/lq_plugin_default_fpm.c" | sed -e '1s/\(lq_plugin_default_fpm\.o\)[ :]*/src\/\1 src\/lq_plugin_default_fpm\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/lq_plugin_default_fpm.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/lq_plugin_default_float.c" | sed -e '1s/\(lq_plugin_default_float\.o\)[ :]*/src\/\1 src\/lq_plugin_default_float\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/lq_plugin_default_float.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/lq_plugin_default_ffeth.c" | sed -e '1s/\(lq_plugin_default_ffeth\.o\)[ :]*/src\/\1 src\/lq_plugin_default_ffeth\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/lq_plugin_default_ffeth.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/lq_plugin_default_ff.c" | sed -e '1s/\(lq_plugin_default_ff\.o\)[ :]*/src\/\1 src\/lq_plugin_default_ff\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/lq_plugin_default_ff.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/lq_plugin.c" | sed -e '1s/\(lq_plugin\.o\)[ :]*/src\/\1 src\/lq_plugin\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/lq_plugin.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/lq_packet.c" | sed -e '1s/\(lq_packet\.o\)[ :]*/src\/\1 src\/lq_packet\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/lq_packet.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/lq_mpr.c" | sed -e '1s/\(lq_mpr\.o\)[ :]*/src\/\1 src\/lq_mpr\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/lq_mpr.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/lock_file.c" | sed -e '1s/\(lock_file\.o\)[ :]*/src\/\1 src\/lock_file\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/lock_file.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/link_set.c" | sed -e '1s/\(link_set\.o\)[ :]*/src\/\1 src\/link_set\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/link_set.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/ipcalc.c" | sed -e '1s/\(ipcalc\.o\)[ :]*/src\/\1 src\/ipcalc\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/ipcalc.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/ipc_frontend.c" | sed -e '1s/\(ipc_frontend\.o\)[ :]*/src\/\1 src\/ipc_frontend\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/ipc_frontend.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/interfaces.c" | sed -e '1s/\(interfaces\.o\)[ :]*/src\/\1 src\/interfaces\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/interfaces.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/hysteresis.c" | sed -e '1s/\(hysteresis\.o\)[ :]*/src\/\1 src\/hysteresis\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/hysteresis.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/hna_set.c" | sed -e '1s/\(hna_set\.o\)[ :]*/src\/\1 src\/hna_set\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/hna_set.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/hashing.c" | sed -e '1s/\(hashing\.o\)[ :]*/src\/\1 src\/hashing\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/hashing.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/generate_msg.c" | sed -e '1s/\(generate_msg\.o\)[ :]*/src\/\1 src\/generate_msg\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/generate_msg.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/gateway_list.c" | sed -e '1s/\(gateway_list\.o\)[ :]*/src\/\1 src\/gateway_list\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/gateway_list.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/gateway_default_handler.c" | sed -e '1s/\(gateway_default_handler\.o\)[ :]*/src\/\1 src\/gateway_default_handler\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/gateway_default_handler.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/gateway_costs.c" | sed -e '1s/\(gateway_costs\.o\)[ :]*/src\/\1 src\/gateway_costs\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/gateway_costs.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/gateway.c" | sed -e '1s/\(gateway\.o\)[ :]*/src\/\1 src\/gateway\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/gateway.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/fpm.c" | sed -e '1s/\(fpm\.o\)[ :]*/src\/\1 src\/fpm\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/fpm.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/egressFile.c" | sed -e '1s/\(egressFile\.o\)[ :]*/src\/\1 src\/egressFile\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/egressFile.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/duplicate_set.c" | sed -e '1s/\(duplicate_set\.o\)[ :]*/src\/\1 src\/duplicate_set\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/duplicate_set.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/duplicate_handler.c" | sed -e '1s/\(duplicate_handler\.o\)[ :]*/src\/\1 src\/duplicate_handler\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/duplicate_handler.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/common/string_handling.c" | sed -e '1s/\(string_handling\.o\)[ :]*/src\/common\/\1 src\/common\/string_handling\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/common/string_handling.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/common/list.c" | sed -e '1s/\(list\.o\)[ :]*/src\/common\/\1 src\/common\/list\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/common/list.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/common/avl.c" | sed -e '1s/\(avl\.o\)[ :]*/src\/common\/\1 src\/common\/avl\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/common/avl.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/common/autobuf.c" | sed -e '1s/\(autobuf\.o\)[ :]*/src\/common\/\1 src\/common\/autobuf\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/common/autobuf.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/cli.c" | sed -e '1s/\(cli\.o\)[ :]*/src\/\1 src\/cli\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/cli.d"
+gcc -M -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "src/build_msg.c" | sed -e '1s/\(build_msg\.o\)[ :]*/src\/\1 src\/build_msg\.d: Makefile \/home\/pmelange\/src\/olsrd\/Makefile\.inc /g' >"src/build_msg.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/build_msg.o src/build_msg.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/cli.o src/cli.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/common/autobuf.o src/common/autobuf.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/common/avl.o src/common/avl.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/common/list.o src/common/list.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/common/string_handling.o src/common/string_handling.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/duplicate_handler.o src/duplicate_handler.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/duplicate_set.o src/duplicate_set.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/egressFile.o src/egressFile.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/fpm.o src/fpm.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/gateway.o src/gateway.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/gateway_costs.o src/gateway_costs.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/gateway_default_handler.o src/gateway_default_handler.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/gateway_list.o src/gateway_list.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/generate_msg.o src/generate_msg.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/hashing.o src/hashing.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/hna_set.o src/hna_set.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/hysteresis.o src/hysteresis.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/interfaces.o src/interfaces.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/ipc_frontend.o src/ipc_frontend.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/ipcalc.o src/ipcalc.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/link_set.o src/link_set.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/lock_file.o src/lock_file.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/lq_mpr.o src/lq_mpr.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/lq_packet.o src/lq_packet.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/lq_plugin.o src/lq_plugin.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/lq_plugin_default_ff.o src/lq_plugin_default_ff.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/lq_plugin_default_ffeth.o src/lq_plugin_default_ffeth.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/lq_plugin_default_float.o src/lq_plugin_default_float.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/lq_plugin_default_fpm.o src/lq_plugin_default_fpm.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/main.o src/main.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/mantissa.o src/mantissa.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/mid_set.o src/mid_set.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/mpr.o src/mpr.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/mpr_selector_set.o src/mpr_selector_set.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/neighbor_table.o src/neighbor_table.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/net_olsr.o src/net_olsr.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/olsr.o src/olsr.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/olsr_cookie.o src/olsr_cookie.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/olsr_niit.o src/olsr_niit.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/olsr_spf.o src/olsr_spf.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/packet.o src/packet.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/parser.o src/parser.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/pid_file.o src/pid_file.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/plugin_loader.o src/plugin_loader.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/plugin_util.o src/plugin_util.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/process_package.o src/process_package.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/process_routes.o src/process_routes.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/rebuild_packet.o src/rebuild_packet.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/routing_table.o src/routing_table.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/scheduler.o src/scheduler.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/superfasthash.o src/superfasthash.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/tc_set.o src/tc_set.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/two_hop_neighbor_table.o src/two_hop_neighbor_table.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/linux/apm.o src/linux/apm.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/linux/kernel_routes_nl.o src/linux/kernel_routes_nl.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/linux/kernel_tunnel.o src/linux/kernel_tunnel.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/linux/lq_plugin_ffeth_nl80211.o src/linux/lq_plugin_ffeth_nl80211.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/linux/net.o src/linux/net.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/linux/nl80211_link_info.o src/linux/nl80211_link_info.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/unix/ifnet.o src/unix/ifnet.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/unix/log.o src/unix/log.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/unix/misc.o src/unix/misc.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/cfgparser/olsrd_conf.o src/cfgparser/olsrd_conf.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/cfgparser/olsrd_conf_checksum.o src/cfgparser/olsrd_conf_checksum.c
+bison -d -o "src/cfgparser/oparse.c-tmp" "src/cfgparser/oparse.y"
+sed	-e 's/register //' \
+	-e '/^#line/s/src\/cfgparser\/oparse\.c-tmp/src\/cfgparser\/oparse\.c/' \
+	< "src/cfgparser/oparse.c-tmp" >"src/cfgparser/oparse.c"
+mv "src/cfgparser/oparse.h-tmp" "src/cfgparser/oparse.h"
+rm -f "src/cfgparser/oparse.c-tmp" "src/cfgparser/oparse.h-tmp"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/cfgparser/oparse.o src/cfgparser/oparse.c
+flex -Cem -o"src/cfgparser/oscan.c-tmp" "src/cfgparser/oscan.lex"
+sed	-e '/^static/s/yy_get_next_buffer[\(][\)]/yy_get_next_buffer(void)/' \
+	-e '/^static/s/yy_get_previous_state[\(][\)]/yy_get_previous_state(void)/' \
+	-e '/^static/s/yygrowstack[\(][\)]/yygrowstack(void)/' \
+	-e '/^static/s/input[\(][\)]/input(void)/' \
+	-e '/^static  *void  *yy_fatal_error/s/^\(.*)\);$/\1 __attribute__((noreturn));/' \
+	-e 's/register //' \
+	-e '/^#line/s/src\/cfgparser\/oscan\.c-tmp/src\/cfgparser\/oscan\.c/' \
+	< "src/cfgparser/oscan.c-tmp" >"src/cfgparser/oscan.c"
+rm -f "src/cfgparser/oscan.c-tmp"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -Wno-sign-compare -Wno-switch-default -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -Isrc/cfgparser -DYY_NO_INPUT -c -o src/cfgparser/oscan.o src/cfgparser/oscan.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/cfgparser/cfgfile_gen.o src/cfgparser/cfgfile_gen.c
+./make/hash_source.sh "builddata.txt" "pre-0.9.9" "1"
+[CREATE] builddata.txt
+'/tmp/olsrd.hash_source.IPkKuMG4cV' -> 'builddata.txt'
+if [ ! -f "src/builddata.c" ] || [ -n "$(diff "builddata.txt" "src/builddata.c")" ]; then cp -p "builddata.txt" "src/builddata.c"; fi
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/pmelange/src/olsrd/src -I/home/pmelange/src/olsrd/lib -I/home/pmelange/src/olsrd/lib/pud/nmealib/include -I/home/pmelange/src/olsrd/lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o src/builddata.o src/builddata.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -lm -o olsrd src/build_msg.o src/cli.o src/common/autobuf.o src/common/avl.o src/common/list.o src/common/string_handling.o src/duplicate_handler.o src/duplicate_set.o src/egressFile.o src/fpm.o src/gateway.o src/gateway_costs.o src/gateway_default_handler.o src/gateway_list.o src/generate_msg.o src/hashing.o src/hna_set.o src/hysteresis.o src/interfaces.o src/ipc_frontend.o src/ipcalc.o src/link_set.o src/lock_file.o src/lq_mpr.o src/lq_packet.o src/lq_plugin.o src/lq_plugin_default_ff.o src/lq_plugin_default_ffeth.o src/lq_plugin_default_float.o src/lq_plugin_default_fpm.o src/main.o src/mantissa.o src/mid_set.o src/mpr.o src/mpr_selector_set.o src/neighbor_table.o src/net_olsr.o src/olsr.o src/olsr_cookie.o src/olsr_niit.o src/olsr_spf.o src/packet.o src/parser.o src/pid_file.o src/plugin_loader.o src/plugin_util.o src/process_package.o src/process_routes.o src/rebuild_packet.o src/routing_table.o src/scheduler.o src/superfasthash.o src/tc_set.o src/two_hop_neighbor_table.o src/linux/apm.o src/linux/kernel_routes_nl.o src/linux/kernel_tunnel.o src/linux/lq_plugin_ffeth_nl80211.o src/linux/net.o src/linux/nl80211_link_info.o src/unix/ifnet.o src/unix/log.o src/unix/misc.o src/cfgparser/olsrd_conf.o src/cfgparser/olsrd_conf_checksum.o src/cfgparser/oparse.o src/cfgparser/oscan.o src/cfgparser/cfgfile_gen.o src/builddata.o -lrt -ldl
+/usr/bin/make OS="linux" WARNINGS="" VERBOSE="1" SANITIZE_ADDRESS="0" -C src/olsr_switch
+make[3]: Entering directory '/home/pmelange/src/olsrd/src/olsr_switch'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "ohs_cmd.c" | sed -e '1s/\(ohs_cmd\.o\)[ :]*/\.\/\1 ohs_cmd\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"ohs_cmd.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "main.c" | sed -e '1s/\(main\.o\)[ :]*/\.\/\1 main\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"main.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DUSE_FPM -DNDEBUG "link_rules.c" | sed -e '1s/\(link_rules\.o\)[ :]*/\.\/\1 link_rules\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"link_rules.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o link_rules.o link_rules.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o main.o main.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -Wno-cast-qual -DNO_OLDNAMES -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include  -DUSE_FPM  -DNDEBUG   -c -o ohs_cmd.o ohs_cmd.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -o ../../olsr_switch link_rules.o main.o ohs_cmd.o ../common/string_handling.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/src/olsr_switch'
+set -e;for dir in arprefresh bmf dot_draw dyn_gw dyn_gw_plain httpinfo info jsoninfo mdns mini nameservice netjson poprouting p2pd pgraph pud quagga secure sgwdynspeed txtinfo watchdog;do /usr/bin/make OS="linux" WARNINGS="" VERBOSE="1" SANITIZE_ADDRESS="0" -C lib/$dir LIBDIR=/usr/lib;done
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/arprefresh'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_arprefresh.c" | sed -e '1s/\(olsrd_arprefresh\.o\)[ :]*/src\/\1 src\/olsrd_arprefresh\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_arprefresh.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_arprefresh.o src/olsrd_arprefresh.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_arprefresh.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_arprefresh.so.0.1 src/olsrd_arprefresh.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/arprefresh'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/bmf'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/PacketHistory.c" | sed -e '1s/\(PacketHistory\.o\)[ :]*/src\/\1 src\/PacketHistory\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/PacketHistory.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/Packet.c" | sed -e '1s/\(Packet\.o\)[ :]*/src\/\1 src\/Packet\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/Packet.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/NetworkInterfaces.c" | sed -e '1s/\(NetworkInterfaces\.o\)[ :]*/src\/\1 src\/NetworkInterfaces\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/NetworkInterfaces.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/Bmf.c" | sed -e '1s/\(Bmf\.o\)[ :]*/src\/\1 src\/Bmf\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/Bmf.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/Address.c" | sed -e '1s/\(Address\.o\)[ :]*/src\/\1 src\/Address\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/Address.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/Address.o src/Address.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/Bmf.o src/Bmf.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/NetworkInterfaces.o src/NetworkInterfaces.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/Packet.o src/Packet.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/PacketHistory.o src/PacketHistory.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_bmf.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_bmf.so.1.7.0 src/Address.o src/Bmf.o src/NetworkInterfaces.o src/Packet.o src/PacketHistory.o src/olsrd_plugin.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/bmf'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/dot_draw'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_dot_draw.c" | sed -e '1s/\(olsrd_dot_draw\.o\)[ :]*/src\/\1 src\/olsrd_dot_draw\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_dot_draw.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_dot_draw.o src/olsrd_dot_draw.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_dot_draw.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -lm -o olsrd_dot_draw.so.0.3 src/olsrd_dot_draw.o src/olsrd_plugin.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/dot_draw'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/dyn_gw'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -pthread "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -pthread "src/olsrd_dyn_gw.c" | sed -e '1s/\(olsrd_dyn_gw\.o\)[ :]*/src\/\1 src\/olsrd_dyn_gw\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_dyn_gw.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -pthread -c -o src/olsrd_dyn_gw.o src/olsrd_dyn_gw.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -pthread -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_dyn_gw.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_dyn_gw.so.0.5 src/olsrd_dyn_gw.o src/olsrd_plugin.o -lrt -lpthread
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/dyn_gw'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/dyn_gw_plain'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_dyn_gw_plain.c" | sed -e '1s/\(olsrd_dyn_gw_plain\.o\)[ :]*/src\/\1 src\/olsrd_dyn_gw_plain\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_dyn_gw_plain.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_dyn_gw_plain.o src/olsrd_dyn_gw_plain.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_dyn_gw_plain.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_dyn_gw_plain.so.0.4 src/olsrd_dyn_gw_plain.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/dyn_gw_plain'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/httpinfo'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_httpinfo.c" | sed -e '1s/\(olsrd_httpinfo\.o\)[ :]*/src\/\1 src\/olsrd_httpinfo\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_httpinfo.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/admin_interface.c" | sed -e '1s/\(admin_interface\.o\)[ :]*/src\/\1 src\/admin_interface\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/admin_interface.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/admin_interface.o src/admin_interface.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_httpinfo.o src/olsrd_httpinfo.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_httpinfo.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -lm -o olsrd_httpinfo.so.0.1 src/admin_interface.o src/olsrd_httpinfo.o src/olsrd_plugin.o ../../src/cfgparser/cfgfile_gen.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/httpinfo'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/info'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "olsrd_info.c" | sed -e '1s/\(olsrd_info\.o\)[ :]*/\.\/\1 olsrd_info\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"olsrd_info.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "json_helpers.c" | sed -e '1s/\(json_helpers\.o\)[ :]*/\.\/\1 json_helpers\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"json_helpers.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "http_headers.c" | sed -e '1s/\(http_headers\.o\)[ :]*/\.\/\1 http_headers\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"http_headers.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o http_headers.o http_headers.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o json_helpers.o json_helpers.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o olsrd_info.o olsrd_info.c
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/info'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/jsoninfo'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_jsoninfo.c" | sed -e '1s/\(olsrd_jsoninfo\.o\)[ :]*/src\/\1 src\/olsrd_jsoninfo\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_jsoninfo.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_jsoninfo.o src/olsrd_jsoninfo.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_jsoninfo.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -lm -o olsrd_jsoninfo.so.1.1 src/olsrd_jsoninfo.o src/olsrd_plugin.o ../info/http_headers.o ../info/json_helpers.o ../info/olsrd_info.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/jsoninfo'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/mdns'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/mdns.c" | sed -e '1s/\(mdns\.o\)[ :]*/src\/\1 src\/mdns\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/mdns.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/RouterElection.c" | sed -e '1s/\(RouterElection\.o\)[ :]*/src\/\1 src\/RouterElection\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/RouterElection.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/Packet.c" | sed -e '1s/\(Packet\.o\)[ :]*/src\/\1 src\/Packet\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/Packet.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/NetworkInterfaces.c" | sed -e '1s/\(NetworkInterfaces\.o\)[ :]*/src\/\1 src\/NetworkInterfaces\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/NetworkInterfaces.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/Address.c" | sed -e '1s/\(Address\.o\)[ :]*/src\/\1 src\/Address\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/Address.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/Address.o src/Address.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/NetworkInterfaces.o src/NetworkInterfaces.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/Packet.o src/Packet.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/RouterElection.o src/RouterElection.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/mdns.o src/mdns.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_mdns.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_mdns.so.1.0.1 src/Address.o src/NetworkInterfaces.o src/Packet.o src/RouterElection.o src/mdns.o src/olsrd_plugin.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/mdns'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/mini'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/mini_plugin.c" | sed -e '1s/\(mini_plugin\.o\)[ :]*/src\/\1 src\/mini_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/mini_plugin.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/mini_plugin.o src/mini_plugin.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_mini.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_mini.so.0.1 src/mini_plugin.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/mini'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/nameservice'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/nameservice.c" | sed -e '1s/\(nameservice\.o\)[ :]*/src\/\1 src\/nameservice\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/nameservice.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/mapwrite.c" | sed -e '1s/\(mapwrite\.o\)[ :]*/src\/\1 src\/mapwrite\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/mapwrite.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/compat.c" | sed -e '1s/\(compat\.o\)[ :]*/src\/\1 src\/compat\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/compat.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/compat.o src/compat.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/mapwrite.o src/mapwrite.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/nameservice.o src/nameservice.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_nameservice.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_nameservice.so.0.4 src/compat.o src/mapwrite.o src/nameservice.o src/olsrd_plugin.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/nameservice'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/netjson'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_netjson_helpers.c" | sed -e '1s/\(olsrd_netjson_helpers\.o\)[ :]*/src\/\1 src\/olsrd_netjson_helpers\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_netjson_helpers.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_netjson.c" | sed -e '1s/\(olsrd_netjson\.o\)[ :]*/src\/\1 src\/olsrd_netjson\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_netjson.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_netjson.o src/olsrd_netjson.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_netjson_helpers.o src/olsrd_netjson_helpers.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_netjson.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -lm -o olsrd_netjson.so.1.1 src/olsrd_netjson.o src/olsrd_netjson_helpers.o src/olsrd_plugin.o ../info/http_headers.o ../info/json_helpers.o ../info/olsrd_info.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/netjson'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/poprouting'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_poprouting.c" | sed -e '1s/\(olsrd_poprouting\.o\)[ :]*/src\/\1 src\/olsrd_poprouting\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_poprouting.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_poprouting.o src/olsrd_poprouting.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_poprouting.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_poprouting.so.1.0 src/olsrd_plugin.o src/olsrd_poprouting.o ../info/olsrd_info.o ../info/json_helpers.o ../info/http_headers.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/poprouting'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/p2pd'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/p2pd.c" | sed -e '1s/\(p2pd\.o\)[ :]*/src\/\1 src\/p2pd\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/p2pd.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/dllist.c" | sed -e '1s/\(dllist\.o\)[ :]*/src\/\1 src\/dllist\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/dllist.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/PacketHistory.c" | sed -e '1s/\(PacketHistory\.o\)[ :]*/src\/\1 src\/PacketHistory\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/PacketHistory.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/Packet.c" | sed -e '1s/\(Packet\.o\)[ :]*/src\/\1 src\/Packet\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/Packet.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/NetworkInterfaces.c" | sed -e '1s/\(NetworkInterfaces\.o\)[ :]*/src\/\1 src\/NetworkInterfaces\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/NetworkInterfaces.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/NetworkInterfaces.o src/NetworkInterfaces.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/Packet.o src/Packet.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/PacketHistory.o src/PacketHistory.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/dllist.o src/dllist.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/p2pd.o src/p2pd.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_p2pd.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_p2pd.so.0.1.0 src/NetworkInterfaces.o src/Packet.o src/PacketHistory.o src/dllist.o src/olsrd_plugin.o src/p2pd.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/p2pd'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/pgraph'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_pgraph.c" | sed -e '1s/\(olsrd_pgraph\.o\)[ :]*/src\/\1 src\/olsrd_pgraph\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_pgraph.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_pgraph.o src/olsrd_pgraph.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_pgraph.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_pgraph.so.1.1 src/olsrd_pgraph.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/pgraph'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/pud'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/uplinkGateway.c" | sed -e '1s/\(uplinkGateway\.o\)[ :]*/src\/\1 src\/uplinkGateway\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/uplinkGateway.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/timers.c" | sed -e '1s/\(timers\.o\)[ :]*/src\/\1 src\/timers\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/timers.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/state.c" | sed -e '1s/\(state\.o\)[ :]*/src\/\1 src\/state\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/state.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/receiver.c" | sed -e '1s/\(receiver\.o\)[ :]*/src\/\1 src\/receiver\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/receiver.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/pudOlsrdPlugin.c" | sed -e '1s/\(pudOlsrdPlugin\.o\)[ :]*/src\/\1 src\/pudOlsrdPlugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/pudOlsrdPlugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/pud.c" | sed -e '1s/\(pud\.o\)[ :]*/src\/\1 src\/pud\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/pud.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/posFile.c" | sed -e '1s/\(posFile\.o\)[ :]*/src\/\1 src\/posFile\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/posFile.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/posAvg.c" | sed -e '1s/\(posAvg\.o\)[ :]*/src\/\1 src\/posAvg\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/posAvg.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/networkInterfaces.c" | sed -e '1s/\(networkInterfaces\.o\)[ :]*/src\/\1 src\/networkInterfaces\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/networkInterfaces.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/netTools.c" | sed -e '1s/\(netTools\.o\)[ :]*/src\/\1 src\/netTools\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/netTools.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/gpsdclient.c" | sed -e '1s/\(gpsdclient\.o\)[ :]*/src\/\1 src\/gpsdclient\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/gpsdclient.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/gpsConversion.c" | sed -e '1s/\(gpsConversion\.o\)[ :]*/src\/\1 src\/gpsConversion\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/gpsConversion.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/dedup.c" | sed -e '1s/\(dedup\.o\)[ :]*/src\/\1 src\/dedup\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/dedup.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/configuration.c" | sed -e '1s/\(configuration\.o\)[ :]*/src\/\1 src\/configuration\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/configuration.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/configTools.c" | sed -e '1s/\(configTools\.o\)[ :]*/src\/\1 src\/configTools\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/configTools.d"
+/usr/bin/make -C "nmealib" all
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/nmealib'
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/validate.c" | sed -e '1s/\(validate\.o\)[ :]*/src\/\1 src\/validate\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/validate.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/util.c" | sed -e '1s/\(util\.o\)[ :]*/src\/\1 src\/util\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/util.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/sentence.c" | sed -e '1s/\(sentence\.o\)[ :]*/src\/\1 src\/sentence\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/sentence.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/parser.c" | sed -e '1s/\(parser\.o\)[ :]*/src\/\1 src\/parser\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/parser.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/nmath.c" | sed -e '1s/\(nmath\.o\)[ :]*/src\/\1 src\/nmath\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/nmath.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/info.c" | sed -e '1s/\(info\.o\)[ :]*/src\/\1 src\/info\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/info.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/gpvtg.c" | sed -e '1s/\(gpvtg\.o\)[ :]*/src\/\1 src\/gpvtg\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/gpvtg.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/gprmc.c" | sed -e '1s/\(gprmc\.o\)[ :]*/src\/\1 src\/gprmc\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/gprmc.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/gpgsv.c" | sed -e '1s/\(gpgsv\.o\)[ :]*/src\/\1 src\/gpgsv\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/gpgsv.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/gpgsa.c" | sed -e '1s/\(gpgsa\.o\)[ :]*/src\/\1 src\/gpgsa\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/gpgsa.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/gpgga.c" | sed -e '1s/\(gpgga\.o\)[ :]*/src\/\1 src\/gpgga\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/gpgga.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/generator.c" | sed -e '1s/\(generator\.o\)[ :]*/src\/\1 src\/generator\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/generator.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG -I ./include "src/context.c" | sed -e '1s/\(context\.o\)[ :]*/src\/\1 src\/context\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/context.d"
+mkdir -p build lib
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/context.c -o build/context.o
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/generator.c -o build/generator.o
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/gpgga.c -o build/gpgga.o
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/gpgsa.c -o build/gpgsa.o
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/gpgsv.c -o build/gpgsv.o
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/gprmc.c -o build/gprmc.o
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/gpvtg.c -o build/gpvtg.o
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/info.c -o build/info.o
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/nmath.c -o build/nmath.o
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/parser.c -o build/parser.o
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/sentence.c -o build/sentence.o
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/util.c -o build/util.o
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -Wall -Wextra -Wold-style-definition -Wdeclaration-after-statement -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations -Wsign-compare -Waggregate-return -Wmissing-noreturn -Wmissing-format-attribute -Wno-multichar -Wno-deprecated-declarations -Wendif-labels -Wwrite-strings -Wbad-function-cast -Wpointer-arith -Wcast-qual -Wshadow -Wformat -Wsequence-point -Wcast-align -Wnested-externs -Winline -Wdisabled-optimization -funit-at-a-time -fPIC -ggdb -Wformat=2 -Winit-self -Wswitch-default -Wswitch-enum -Wconversion -Wdouble-promotion -Werror=format-security -Wformat-security -Wformat-y2k -Wredundant-decls -Wundef -Wunreachable-code -Wunused-parameter -fearly-inlining -finline-functions-called-once -finline-limit=350 -Wtrampolines -Wsync-nand -Wlogical-op -Wjump-misses-init -Werror -Wnull-dereference -Wshift-negative-value -Wshift-overflow -Wtautological-compare -Wmisleading-indentation -Wduplicated-cond -O2 -I ./include -c src/validate.c -o build/validate.o
+ar rcs "lib/libnmea.a" build/context.o build/generator.o build/gpgga.o build/gpgsa.o build/gpgsv.o build/gprmc.o build/gpvtg.o build/info.o build/nmath.o build/parser.o build/sentence.o build/util.o build/validate.o
+gcc -shared -Wl,--warn-common -fPIC -Wl,-soname=libnmea.so -o "lib/libnmea.so" -lm build/context.o build/generator.o build/gpgga.o build/gpgsa.o build/gpgsv.o build/gprmc.o build/gpvtg.o build/info.o build/nmath.o build/parser.o build/sentence.o build/util.o build/validate.o
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/nmealib'
+/usr/bin/make -C "wireformat" all
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/wireformat'
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/wireFormat.c" | sed -e '1s/\(wireFormat\.o\)[ :]*/src\/\1 src\/wireFormat\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/wireFormat.d"
+gcc -M -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/nodeIdConversion.c" | sed -e '1s/\(nodeIdConversion\.o\)[ :]*/src\/\1 src\/nodeIdConversion\.d: Makefile \.\.\/\.\.\/\.\.\/Makefile\.inc /g' >"src/nodeIdConversion.d"
+mkdir -p "build" "lib"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o "build/nodeIdConversion.o" "src/nodeIdConversion.c"
+src/nodeIdConversion.c: In function ‘getNodeIdStringFromOlsr’:
+src/nodeIdConversion.c:113:44: warning: ‘%llu’ directive output may be truncated writing between 1 and 3 bytes into a region of size 2 [-Wformat-truncation=]
+  snprintf(nodeIdBuffer, nodeIdBufferSize, "%llu", val);
+                                            ^~~~
+src/nodeIdConversion.c:113:43: note: directive argument in the range [0, 255]
+  snprintf(nodeIdBuffer, nodeIdBufferSize, "%llu", val);
+                                           ^~~~~~
+src/nodeIdConversion.c:113:2: note: ‘snprintf’ output between 2 and 4 bytes into a destination of size 2
+  snprintf(nodeIdBuffer, nodeIdBufferSize, "%llu", val);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -fPIC -I../../../src -I../../../lib -I../../../lib/pud/nmealib/include -I../../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o "build/wireFormat.o" "src/wireFormat.c"
+gcc -shared -Wl,--warn-common -fPIC -Wl,-soname=libOlsrdPudWireFormat.so -lm -o "lib/libOlsrdPudWireFormat.so" build/nodeIdConversion.o build/wireFormat.o
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/wireformat'
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/configTools.o src/configTools.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/configuration.o src/configuration.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/dedup.o src/dedup.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/gpsConversion.o src/gpsConversion.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/gpsdclient.o src/gpsdclient.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/netTools.o src/netTools.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/networkInterfaces.o src/networkInterfaces.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/posAvg.o src/posAvg.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/posFile.o src/posFile.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/pud.o src/pud.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/pudOlsrdPlugin.o src/pudOlsrdPlugin.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/receiver.o src/receiver.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/state.o src/state.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/timers.o src/timers.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -D_GNU_SOURCE -DPLUGIN_VER=\"3.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/uplinkGateway.o src/uplinkGateway.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_pud.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_pud.so.3.0.0 src/configTools.o src/configuration.o src/dedup.o src/gpsConversion.o src/gpsdclient.o src/netTools.o src/networkInterfaces.o src/posAvg.o src/posFile.o src/pud.o src/pudOlsrdPlugin.o src/receiver.o src/state.o src/timers.o src/uplinkGateway.o -lrt -L nmealib/lib -L wireformat/lib -lnmea -lm -lOlsrdPudWireFormat -lgps
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/pud'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/quagga'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/quagga.c" | sed -e '1s/\(quagga\.o\)[ :]*/src\/\1 src\/quagga\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/quagga.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/plugin.c" | sed -e '1s/\(plugin\.o\)[ :]*/src\/\1 src\/plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/plugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/parse.c" | sed -e '1s/\(parse\.o\)[ :]*/src\/\1 src\/parse\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/parse.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/packet.c" | sed -e '1s/\(packet\.o\)[ :]*/src\/\1 src\/packet\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/packet.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/client.c" | sed -e '1s/\(client\.o\)[ :]*/src\/\1 src\/client\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/client.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -g -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/client.o src/client.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -g -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -g -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/packet.o src/packet.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -g -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/parse.o src/parse.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -g -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/plugin.o src/plugin.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -g -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/quagga.o src/quagga.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_quagga.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_quagga.so.0.2.2 src/client.o src/olsrd_plugin.o src/packet.o src/parse.o src/plugin.o src/quagga.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/quagga'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/secure'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_secure.c" | sed -e '1s/\(olsrd_secure\.o\)[ :]*/src\/\1 src\/olsrd_secure\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_secure.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/md5.c" | sed -e '1s/\(md5\.o\)[ :]*/src\/\1 src\/md5\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/md5.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/md5.o src/md5.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_secure.o src/olsrd_secure.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_secure.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -lm -o olsrd_secure.so.0.6 src/md5.o src/olsrd_plugin.o src/olsrd_secure.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/secure'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/sgwdynspeed'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/speedFile.c" | sed -e '1s/\(speedFile\.o\)[ :]*/src\/\1 src\/speedFile\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/speedFile.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/sgwDynSpeed.c" | sed -e '1s/\(sgwDynSpeed\.o\)[ :]*/src\/\1 src\/sgwDynSpeed\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/sgwDynSpeed.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrdPlugin.c" | sed -e '1s/\(olsrdPlugin\.o\)[ :]*/src\/\1 src\/olsrdPlugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrdPlugin.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/configuration.c" | sed -e '1s/\(configuration\.o\)[ :]*/src\/\1 src\/configuration\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/configuration.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -DPLUGIN_VER=\"1.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/configuration.o src/configuration.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -DPLUGIN_VER=\"1.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrdPlugin.o src/olsrdPlugin.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -DPLUGIN_VER=\"1.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/sgwDynSpeed.o src/sgwDynSpeed.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -DPLUGIN_VER=\"1.0.0\" -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/speedFile.o src/speedFile.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_sgwdynspeed.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_sgwdynspeed.so.1.0.0 src/configuration.o src/olsrdPlugin.o src/sgwDynSpeed.o src/speedFile.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/sgwdynspeed'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/txtinfo'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_txtinfo.c" | sed -e '1s/\(olsrd_txtinfo\.o\)[ :]*/src\/\1 src\/olsrd_txtinfo\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_txtinfo.d"
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_txtinfo.o src/olsrd_txtinfo.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_txtinfo.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -lm -o olsrd_txtinfo.so.1.1 src/olsrd_plugin.o src/olsrd_txtinfo.o ../info/http_headers.o ../info/json_helpers.o ../info/olsrd_info.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/txtinfo'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/watchdog'
+gcc -M -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN -DUSE_FPM -DNDEBUG "src/olsrd_plugin.c" | sed -e '1s/\(olsrd_plugin\.o\)[ :]*/src\/\1 src\/olsrd_plugin\.d: Makefile \.\.\/\.\.\/Makefile\.inc /g' >"src/olsrd_plugin.d"
+gcc -g -O2 -fdebug-prefix-map=/home/pmelange/src/olsrd=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -fPIC -I../../src -I../../lib -I../../lib/pud/nmealib/include -I../../lib/pud/wireformat/include -DOLSR_PLUGIN  -DUSE_FPM  -DNDEBUG   -c -o src/olsrd_plugin.o src/olsrd_plugin.c
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/usr/lib -Wl,--warn-common -fPIC -shared -Wl,-soname,libolsrd_watchdog.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -o olsrd_watchdog.so.0.1 src/olsrd_plugin.o -lrt
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/watchdog'
+make[2]: Leaving directory '/home/pmelange/src/olsrd'
+/usr/bin/make -C gui/linux-gtk
+make[2]: Entering directory '/home/pmelange/src/olsrd/gui/linux-gtk'
+[CC] src/callbacks.c
+[CC] src/common.c
+[CC] src/interface.c
+[CC] src/ipc.c
+[CC] src/main.c
+[CC] src/nodes.c
+[CC] src/olsr.c
+[CC] src/packet.c
+[CC] src/routes.c
+[LD] olsrd-gui
+make[2]: Leaving directory '/home/pmelange/src/olsrd/gui/linux-gtk'
+/usr/bin/make -C src/olsr_switch
+make[2]: Entering directory '/home/pmelange/src/olsrd/src/olsr_switch'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/pmelange/src/olsrd/src/olsr_switch'
+make[1]: Leaving directory '/home/pmelange/src/olsrd'
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   dh_installdirs
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/pmelange/src/olsrd'
+/usr/bin/make VERBOSE=1 STRIP=: DESTDIR=/home/pmelange/src/olsrd/debian/olsrd \
+	prefix=/usr libdir=/usr/lib/olsrd install
+make[2]: Entering directory '/home/pmelange/src/olsrd'
+mkdir -p /home/pmelange/src/olsrd/debian/olsrd/usr/sbin
+install -m 755 olsrd /home/pmelange/src/olsrd/debian/olsrd/usr/sbin
+: /home/pmelange/src/olsrd/debian/olsrd/usr/sbin/olsrd
+if [ -e /home/pmelange/src/olsrd/debian/olsrd/usr/sbin/sgw_policy_routing_setup.sh ]; then \
+		cp -f files/sgw_policy_routing_setup.sh /home/pmelange/src/olsrd/debian/olsrd/usr/sbin/sgw_policy_routing_setup.sh.new; \
+		echo "Policy routing script was saved as /home/pmelange/src/olsrd/debian/olsrd/usr/sbin/sgw_policy_routing_setup.sh.new"; \
+	else \
+		cp -f files/sgw_policy_routing_setup.sh /home/pmelange/src/olsrd/debian/olsrd/usr/sbin/sgw_policy_routing_setup.sh; \
+	fi
+========= C O N F I G U R A T I O N - F I L E ============
+olsrd uses the configfile /home/pmelange/src/olsrd/etc/olsrd/olsrd.conf
+a default configfile. A sample RFC-compliance aimed
+configfile can be found in olsrd.conf.default.rfc.
+However none of the larger OLSRD using networks use that
+so install a configfile with activated link quality exstensions
+per default.
+can be found at files/olsrd.conf.default.lq
+==========================================================
+mkdir -p /home/pmelange/src/olsrd/etc/olsrd
+if [ -e /home/pmelange/src/olsrd/etc/olsrd/olsrd.conf ]; then \
+		cp -f files/olsrd.conf.default.lq /home/pmelange/src/olsrd/etc/olsrd/olsrd.conf.new; \
+		echo "Configuration file was saved as /home/pmelange/src/olsrd/etc/olsrd/olsrd.conf.new"; \
+	else \
+		cp -f files/olsrd.conf.default.lq /home/pmelange/src/olsrd/etc/olsrd/olsrd.conf; \
+	fi
+Configuration file was saved as /home/pmelange/src/olsrd/etc/olsrd/olsrd.conf.new
+-------------------------------------------
+Edit /home/pmelange/src/olsrd/etc/olsrd/olsrd.conf before running olsrd!!
+-------------------------------------------
+Installing manpages olsrd(8) and olsrd.conf(5)
+mkdir -p /home/pmelange/src/olsrd/debian/olsrd/usr/share/man/man8/
+cp files/olsrd.8.gz /home/pmelange/src/olsrd/debian/olsrd/usr/share/man/man8/olsrd.8.gz
+mkdir -p /home/pmelange/src/olsrd/debian/olsrd/usr/share/man/man5/
+cp files/olsrd.conf.5.gz /home/pmelange/src/olsrd/debian/olsrd/usr/share/man/man5/olsrd.conf.5.gz
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd/usr/share/doc/olsrd"
+cp -t "/home/pmelange/src/olsrd/debian/olsrd/usr/share/doc/olsrd" "CHANGELOG" "README-Olsr-Extensions" \
+	  "README-LINUX_NL80211.txt" "files/olsrd.conf.default" \
+	  "files/olsrd.conf.default.txt" "license.txt"
+make[2]: Leaving directory '/home/pmelange/src/olsrd'
+/usr/bin/make VERBOSE=1 STRIP=: DESTDIR=/home/pmelange/src/olsrd/debian/olsrd-plugins \
+	prefix=/usr libdir=/usr/lib/olsrd libs_install
+make[2]: Entering directory '/home/pmelange/src/olsrd'
+set -e;for dir in arprefresh bmf dot_draw dyn_gw dyn_gw_plain httpinfo info jsoninfo mdns mini nameservice netjson poprouting p2pd pgraph pud quagga secure sgwdynspeed txtinfo watchdog;do /usr/bin/make OS="linux" WARNINGS="" VERBOSE="1" SANITIZE_ADDRESS="0" -C lib/$dir LIBDIR=/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd install;done
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/arprefresh'
+: olsrd_arprefresh.so.0.1
+install -D -m 755 olsrd_arprefresh.so.0.1 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_arprefresh.so.0.1; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_ARPREFRESH" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/arprefresh'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/bmf'
+: olsrd_bmf.so.1.7.0
+install -D -m 755 olsrd_bmf.so.1.7.0 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_bmf.so.1.7.0; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_BMF" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/bmf'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/dot_draw'
+: olsrd_dot_draw.so.0.3
+install -D -m 755 olsrd_dot_draw.so.0.3 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_dot_draw.so.0.3; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp -t "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd" "README_DOT_DRAW" "olsr-topology-view.pl"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/dot_draw'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/dyn_gw'
+: olsrd_dyn_gw.so.0.5
+install -D -m 755 olsrd_dyn_gw.so.0.5 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_dyn_gw.so.0.5; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_DYN_GW" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/dyn_gw'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/dyn_gw_plain'
+: olsrd_dyn_gw_plain.so.0.4
+install -D -m 755 olsrd_dyn_gw_plain.so.0.4 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_dyn_gw_plain.so.0.4; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_DYN_GW_PLAIN" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/dyn_gw_plain'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/httpinfo'
+: olsrd_httpinfo.so.0.1
+install -D -m 755 olsrd_httpinfo.so.0.1 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_httpinfo.so.0.1; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_HTTPINFO" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/httpinfo'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/info'
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_INFO" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/info'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/jsoninfo'
+: olsrd_jsoninfo.so.1.1
+install -D -m 755 olsrd_jsoninfo.so.1.1 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_jsoninfo.so.1.1; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_JSONINFO" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/jsoninfo'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/mdns'
+: olsrd_mdns.so.1.0.1
+install -D -m 755 olsrd_mdns.so.1.0.1 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_mdns.so.1.0.1; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_MDNS" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/mdns'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/mini'
+: olsrd_mini.so.0.1
+install -D -m 755 olsrd_mini.so.0.1 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_mini.so.0.1; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_MINI" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/mini'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/nameservice'
+: olsrd_nameservice.so.0.4
+install -D -m 755 olsrd_nameservice.so.0.4 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_nameservice.so.0.4; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_NAMESERVICE" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/nameservice'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/netjson'
+: olsrd_netjson.so.1.1
+install -D -m 755 olsrd_netjson.so.1.1 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_netjson.so.1.1; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_NETJSON" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/netjson'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/poprouting'
+: olsrd_poprouting.so.1.0
+install -D -m 755 olsrd_poprouting.so.1.0 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_poprouting.so.1.0; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_POPROUTING" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/poprouting'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/p2pd'
+: olsrd_p2pd.so.0.1.0
+install -D -m 755 olsrd_p2pd.so.0.1.0 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_p2pd.so.0.1.0; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_P2PD" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/p2pd'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/pgraph'
+: olsrd_pgraph.so.1.1
+install -D -m 755 olsrd_pgraph.so.1.1 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_pgraph.so.1.1; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_PGRAPH" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/pgraph'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/pud'
+/usr/bin/make -C "nmealib" all
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/nmealib'
+mkdir -p build lib
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/nmealib'
+/usr/bin/make -C "wireformat" all
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/wireformat'
+mkdir -p "build" "lib"
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/wireformat'
+gcc -Wl,-z,relro -Wl,-z,now -Wl,-export-dynamic  -Wl,-rpath,/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd -Wl,--warn-common -fPIC -rdynamic -shared -Wl,-soname,libolsrd_pud.so -Wl,--version-script=version-script.txt  -Wl,--warn-common -fPIC -rdynamic -o olsrd_pud.so.3.0.0 src/configTools.o src/configuration.o src/dedup.o src/gpsConversion.o src/gpsdclient.o src/netTools.o src/networkInterfaces.o src/posAvg.o src/posFile.o src/pud.o src/pudOlsrdPlugin.o src/receiver.o src/state.o src/timers.o src/uplinkGateway.o -lrt -L nmealib/lib -L wireformat/lib -lnmea -lm -lOlsrdPudWireFormat -lgps
+/usr/bin/make -C "nmealib" DESTDIR="/home/pmelange/src/olsrd/debian/olsrd-plugins" install
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/nmealib'
+mkdir -p build lib
+mkdir -v -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd"
+cp -v "lib/libnmea.so" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/libnmea.so.3.0.0"
+'lib/libnmea.so' -> '/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/libnmea.so.3.0.0'
+: "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/libnmea.so.3.0.0"
+/sbin/ldconfig -n "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd"
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/nmealib'
+/usr/bin/make -C "wireformat" DESTDIR="/home/pmelange/src/olsrd/debian/olsrd-plugins" install
+make[4]: Entering directory '/home/pmelange/src/olsrd/lib/pud/wireformat'
+mkdir -p "build" "lib"
+mkdir -v -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd"
+cp "lib/libOlsrdPudWireFormat.so" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/libOlsrdPudWireFormat.so.3.0.0"
+: "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/libOlsrdPudWireFormat.so.3.0.0"
+/sbin/ldconfig -n "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd"
+make[4]: Leaving directory '/home/pmelange/src/olsrd/lib/pud/wireformat'
+install -D -m 755 olsrd_pud.so.3.0.0 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_pud.so.3.0.0; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/etc/olsrd"
+cp "./resources/olsrd.pud.position.conf" "/home/pmelange/src/olsrd/etc/olsrd"
+: "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_pud.so.3.0.0"
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp -t "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd" "README_PUD" "nmealib/README_NMEALIB" \
+  "wireformat-java/README_PUD_WIREFORMAT_JAVA" "doc/pud.odt"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/pud'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/quagga'
+: olsrd_quagga.so.0.2.2
+install -D -m 755 olsrd_quagga.so.0.2.2 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_quagga.so.0.2.2; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp -t "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd" "README_QUAGGA" "patches/quagga-0.98.6.diff" \
+	  "patches/quagga-0.99.21.diff"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/quagga'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/secure'
+: olsrd_secure.so.0.6
+install -D -m 755 olsrd_secure.so.0.6 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_secure.so.0.6; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_SECURE" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/secure'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/sgwdynspeed'
+install -D -m 755 olsrd_sgwdynspeed.so.1.0.0 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_sgwdynspeed.so.1.0.0; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/etc/olsrd"
+cp "./resources/olsrd.sgw.speed.conf" "/home/pmelange/src/olsrd/etc/olsrd"
+: "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_sgwdynspeed.so.1.0.0"
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_SGWDYNSPEED" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/sgwdynspeed'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/txtinfo'
+: olsrd_txtinfo.so.1.1
+install -D -m 755 olsrd_txtinfo.so.1.1 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_txtinfo.so.1.1; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_TXTINFO" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/txtinfo'
+make[3]: Entering directory '/home/pmelange/src/olsrd/lib/watchdog'
+: olsrd_watchdog.so.0.1
+install -D -m 755 olsrd_watchdog.so.0.1 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd/olsrd_watchdog.so.0.1; /sbin/ldconfig -n /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+cp "README_WATCHDOG" "/home/pmelange/src/olsrd/debian/olsrd-plugins/usr/share/doc/olsrd"
+make[3]: Leaving directory '/home/pmelange/src/olsrd/lib/watchdog'
+make[2]: Leaving directory '/home/pmelange/src/olsrd'
+/usr/bin/make -C gui/linux-gtk VERBOSE=1 DESTDIR=/home/pmelange/src/olsrd/debian/olsrd-gui \
+	prefix=/usr install
+make[2]: Entering directory '/home/pmelange/src/olsrd/gui/linux-gtk'
+mkdir -p "/home/pmelange/src/olsrd/debian/olsrd-gui/usr/bin"
+cp ./olsrd-gui "/home/pmelange/src/olsrd/debian/olsrd-gui/usr/bin/"
+make[2]: Leaving directory '/home/pmelange/src/olsrd/gui/linux-gtk'
+install -d /home/pmelange/src/olsrd/debian/olsrd/usr/sbin/
+install -p -m0755 files/olsrd-adhoc-setup /home/pmelange/src/olsrd/debian/olsrd/usr/sbin/
+install -d /home/pmelange/src/olsrd/debian/olsrd/usr/bin/
+install -p -m0755 olsr_switch /home/pmelange/src/olsrd/debian/olsrd/usr/bin/
+install -d /home/pmelange/src/olsrd/debian/olsrd/usr/share/man/man8
+install -p -m0644 files/olsr_switch.8.gz \
+	/home/pmelange/src/olsrd/debian/olsrd/usr/share/man/man8
+install -d /home/pmelange/src/olsrd/debian/olsrd/usr/share/doc/olsrd/examples
+install -p -m0644 files/olsrd.conf.[a-z]* \
+	/home/pmelange/src/olsrd/debian/olsrd/usr/share/doc/olsrd/examples
+install -d /home/pmelange/src/olsrd/debian/olsrd-gui/usr/share/doc/olsrd-gui/
+install -p -m0644 gui/linux-gtk/CHANGELOG \
+	/home/pmelange/src/olsrd/debian/olsrd-gui/usr/share/doc/olsrd-gui/changelog
+gzip -9 /home/pmelange/src/olsrd/debian/olsrd-gui/usr/share/doc/olsrd-gui/changelog
+install -p -m0644 /home/pmelange/src/olsrd/debian/olsrd.conf \
+	/home/pmelange/src/olsrd/debian/olsrd/etc/olsrd/olsrd.conf
+install -p -m0644 /home/pmelange/src/olsrd/debian/olsrd-default \
+	/home/pmelange/src/olsrd/debian/olsrd/etc/default/olsrd
+make[1]: Leaving directory '/home/pmelange/src/olsrd'
+   dh_installdocs
+   dh_installchangelogs
+   dh_installman
+   dh_installinit
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   debian/rules override_dh_compress
+make[1]: Entering directory '/home/pmelange/src/olsrd'
+# compress, but don't compress README_NAMESERVICE, for consistency reasons
+dh_compress -XREADME_NAMESERVICE -XREADME_BMF
+make[1]: Leaving directory '/home/pmelange/src/olsrd'
+   dh_fixperms
+   dh_missing
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_p2pd.so.0.1.0 contains an unresolvable reference to symbol git_descriptor: it's probably a plugin
+dpkg-shlibdeps: warning: 16 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_sgwdynspeed.so.1.0.0 contains an unresolvable reference to symbol olsr_start_timer: it's probably a plugin
+dpkg-shlibdeps: warning: 8 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_dyn_gw.so.0.5 contains an unresolvable reference to symbol olsr_cnf: it's probably a plugin
+dpkg-shlibdeps: warning: 10 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/olsrd/usr/sbin/olsrd was not linked against libm.so.6 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_httpinfo.so.0.1 contains an unresolvable reference to symbol set_plugin_boolean: it's probably a plugin
+dpkg-shlibdeps: warning: 41 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_txtinfo.so.1.1 contains an unresolvable reference to symbol set_plugin_boolean: it's probably a plugin
+dpkg-shlibdeps: warning: 36 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_mini.so.0.1 contains an unresolvable reference to symbol olsr_printf: it's probably a plugin
+dpkg-shlibdeps: warning: 1 similar warning has been skipped (use -v to see it)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_poprouting.so.1.0 contains an unresolvable reference to symbol olsr_cnf: it's probably a plugin
+dpkg-shlibdeps: warning: 16 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_secure.so.0.6 contains an unresolvable reference to symbol strscpy: it's probably a plugin
+dpkg-shlibdeps: warning: 15 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_nameservice.so.0.4 contains an unresolvable reference to symbol debug_handle: it's probably a plugin
+dpkg-shlibdeps: warning: 34 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_netjson.so.1.1 contains an unresolvable reference to symbol set_plugin_boolean: it's probably a plugin
+dpkg-shlibdeps: warning: 33 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_mdns.so.1.0.1 contains an unresolvable reference to symbol olsr_printf: it's probably a plugin
+dpkg-shlibdeps: warning: 19 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_bmf.so.1.7.0 contains an unresolvable reference to symbol get_linkcost_text: it's probably a plugin
+dpkg-shlibdeps: warning: 21 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_pgraph.so.1.1 contains an unresolvable reference to symbol register_pcf: it's probably a plugin
+dpkg-shlibdeps: warning: 9 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_dot_draw.so.0.3 contains an unresolvable reference to symbol abuf_appendf: it's probably a plugin
+dpkg-shlibdeps: warning: 18 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_dyn_gw_plain.so.0.4 contains an unresolvable reference to symbol olsr_start_timer: it's probably a plugin
+dpkg-shlibdeps: warning: 6 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_arprefresh.so.0.1 contains an unresolvable reference to symbol olsr_printf: it's probably a plugin
+dpkg-shlibdeps: warning: 4 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_quagga.so.0.2.2 contains an unresolvable reference to symbol olsr_addroute_function: it's probably a plugin
+dpkg-shlibdeps: warning: 19 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libnmea.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libnmea.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libOlsrdPudWireFormat.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libOlsrdPudWireFormat.so'
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_pud.so.3.0.0 contains an unresolvable reference to symbol olsr_cnf: it's probably a plugin
+dpkg-shlibdeps: warning: 21 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_jsoninfo.so.1.1 contains an unresolvable reference to symbol set_plugin_port: it's probably a plugin
+dpkg-shlibdeps: warning: 48 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/olsrd-plugins/usr/lib/olsrd/olsrd_watchdog.so.0.1 contains an unresolvable reference to symbol olsr_printf: it's probably a plugin
+dpkg-shlibdeps: warning: 5 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/olsrd-plugins/usr/lib/olsrd/olsrd_p2pd.so.0.1.0 debian/olsrd-plugins/usr/lib/olsrd/olsrd_sgwdynspeed.so.1.0.0 debian/olsrd-plugins/usr/lib/olsrd/olsrd_dyn_gw.so.0.5 debian/olsrd-plugins/usr/lib/olsrd/olsrd_httpinfo.so.0.1 debian/olsrd-plugins/usr/lib/olsrd/olsrd_txtinfo.so.1.1 debian/olsrd-plugins/usr/lib/olsrd/olsrd_mini.so.0.1 debian/olsrd-plugins/usr/lib/olsrd/olsrd_poprouting.so.1.0 debian/olsrd-plugins/usr/lib/olsrd/olsrd_secure.so.0.6 debian/olsrd-plugins/usr/lib/olsrd/olsrd_nameservice.so.0.4 debian/olsrd-plugins/usr/lib/olsrd/olsrd_netjson.so.1.1 debian/olsrd-plugins/usr/lib/olsrd/olsrd_mdns.so.1.0.1 debian/olsrd-plugins/usr/lib/olsrd/olsrd_bmf.so.1.7.0 debian/olsrd-plugins/usr/lib/olsrd/olsrd_pgraph.so.1.1 debian/olsrd-plugins/usr/lib/olsrd/olsrd_dot_draw.so.0.3 debian/olsrd-plugins/usr/lib/olsrd/olsrd_dyn_gw_plain.so.0.4 debian/olsrd-plugins/usr/lib/olsrd/olsrd_arprefresh.so.0.1 debian/olsrd-plugins/usr/lib/olsrd/olsrd_quagga.so.0.2.2 debian/olsrd-plugins/usr/lib/olsrd/olsrd_pud.so.3.0.0 debian/olsrd-plugins/usr/lib/olsrd/olsrd_jsoninfo.so.1.1 debian/olsrd-plugins/usr/lib/olsrd/olsrd_watchdog.so.0.1 were not linked against librt.so.1 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/olsrd-gui/usr/bin/olsrd-gui was not linked against libfontconfig.so.1 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/olsrd-gui/usr/bin/olsrd-gui was not linked against libgio-2.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/olsrd-gui/usr/bin/olsrd-gui was not linked against libpangocairo-1.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/olsrd-gui/usr/bin/olsrd-gui was not linked against libfreetype.so.6 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/olsrd-gui/usr/bin/olsrd-gui was not linked against libatk-1.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/olsrd-gui/usr/bin/olsrd-gui was not linked against libpango-1.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/olsrd-gui/usr/bin/olsrd-gui was not linked against libpangoft2-1.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/olsrd-gui/usr/bin/olsrd-gui was not linked against libcairo.so.2 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/olsrd-gui/usr/bin/olsrd-gui was not linked against libgdk_pixbuf-2.0.so.0 (it uses none of the library's symbols)
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'olsrd-gui' in '../olsrd-gui_0.9.8.0-1_amd64.deb'.
+dpkg-deb: building package 'olsrd-plugins' in '../olsrd-plugins_0.9.8.0-1_amd64.deb'.
+dpkg-deb: building package 'olsrd' in '../olsrd_0.9.8.0-1_amd64.deb'.
+dpkg-deb: building package 'olsrd-gui-dbgsym' in '../olsrd-gui-dbgsym_0.9.8.0-1_amd64.deb'.
+dpkg-deb: building package 'olsrd-dbgsym' in '../olsrd-dbgsym_0.9.8.0-1_amd64.deb'.
+dpkg-deb: building package 'olsrd-plugins-dbgsym' in '../olsrd-plugins-dbgsym_0.9.8.0-1_amd64.deb'.
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../olsrd_0.9.8.0-1_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload; Debian-native package (full source is included)
+Now running lintian olsrd_0.9.8.0-1_amd64.changes ...
+W: olsrd source: diff-contains-git-control-dir .git
+W: olsrd source: changelog-should-mention-nmu
+W: olsrd source: source-nmu-has-incorrect-version-number 0.9.8.0-1
+W: olsrd source: quilt-series-but-no-build-dep
+W: olsrd source: hyphen-in-native-debian-changelog-version 0.9.8.0-1
+W: olsrd source: ancient-standards-version 3.9.5 (released 2013-10-28) (current is 4.3.0)
+W: olsrd source: debian-watch-file-in-native-package
+E: olsrd: binary-or-shlib-defines-rpath usr/bin/olsr_switch /usr/lib
+E: olsrd: binary-or-shlib-defines-rpath usr/sbin/olsrd /usr/lib
+W: olsrd: script-with-language-extension usr/sbin/sgw_policy_routing_setup.sh
+W: olsrd: binary-without-manpage usr/sbin/sgw_policy_routing_setup.sh
+E: olsrd: wrong-path-for-interpreter usr/sbin/sgw_policy_routing_setup.sh (#!/usr/bin/bash != /bin/bash)
+W: olsrd: init.d-script-does-not-source-init-functions etc/init.d/olsrd
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_arprefresh.so.0.1 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_bmf.so.1.7.0 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_dot_draw.so.0.3 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_dyn_gw.so.0.5 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_dyn_gw_plain.so.0.4 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_httpinfo.so.0.1 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_jsoninfo.so.1.1 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_mdns.so.1.0.1 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_mini.so.0.1 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_nameservice.so.0.4 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_netjson.so.1.1 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_p2pd.so.0.1.0 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_pgraph.so.1.1 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_poprouting.so.1.0 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_pud.so.3.0.0 /home/pmelange/src/olsrd/debian/olsrd-plugins/usr/lib/olsrd
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_quagga.so.0.2.2 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_secure.so.0.6 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_sgwdynspeed.so.1.0.0 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_txtinfo.so.1.1 /usr/lib
+E: olsrd-plugins: binary-or-shlib-defines-rpath usr/lib/olsrd/olsrd_watchdog.so.0.1 /usr/lib
+E: olsrd-gui: binary-or-shlib-defines-rpath usr/bin/olsrd-gui /usr/lib
+Finished running lintian.
